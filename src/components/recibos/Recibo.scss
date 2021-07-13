@@ -1,0 +1,12 @@
+.recibo {
+  align-content: center;
+  display: flex;
+  min-height: 200px;
+  justify-content: center;
+  margin: 0 auto;
+  width: 600px;
+
+  &__datos {
+    margin: 1rem;
+  }
+}

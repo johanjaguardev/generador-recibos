@@ -1,0 +1,83 @@
+$dracula-bg: #282a36;
+$dracula-currentline: #44475a;
+$dracula-foreground: #f8f8f2;
+$dracula-coment: #6272a4;
+$dracula-cyan: #8be9fd;
+$dracula-green: #50fa7b;
+$dracula-orange: #ffb86c;
+$dracula-pink: #ff79c6;
+$dracula-purple: #bd93f9;
+$dracula-red: #ff5555;
+$dracula-yellow: #f1fa8c;
+
+$ticket-bg: $dracula-foreground;
+$ticket-shadow: $dracula-purple;
+$ticket-accent: $dracula-pink;
+$ticket-color: $dracula-bg;
+$ticket-amount-positive: $dracula-green;
+$ticket-amount-negative: $dracula-red;
+
+.print {
+  align-items:center;
+  background:
+    linear-gradient(45deg , transparent 2vw, $ticket-bg 2vw) ,
+    linear-gradient(-45deg , transparent 2vw, $ticket-bg 2vw) ,
+    linear-gradient(45deg , transparent 1.8vw, $ticket-shadow 1.8vw) ,
+    linear-gradient(-45deg , transparent 1.8vw, $ticket-accent 1.8vw);
+  background-size: 1vw calc(100% + 1.5vw);
+  border:0.2vw solid $ticket-shadow;
+  border-bottom:none;
+  color: $ticket-color;
+  display:flex;
+  flex-direction: column;
+  font-size:1em;
+  justify-content:center;
+  margin: 1rem;
+  padding: 1rem;
+  position: relative;
+  width: 100%;
+
+  em {
+    font-size: 0.6rem;
+    margin: 0.1em;
+  }
+
+  p {
+    margin: 0.1em;
+  }
+
+  &__stamp {
+    img {
+      width: 70px;
+    }
+  }
+
+  &__name {
+    &s {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    padding: 0.5rem;
+  }
+
+  &__amount {
+    &-positive {
+      color: $ticket-amount-positive;
+    }
+
+    &-negative {
+      color: $ticket-amount-negative;
+    }
+  }
+
+  &__observations {
+    font-size: 0.8rem;
+    max-width: 80%;
+
+    em {
+      text-align: center;
+    }
+  }
+}
